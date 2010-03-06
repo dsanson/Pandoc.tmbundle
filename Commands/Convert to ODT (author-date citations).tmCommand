@@ -32,7 +32,7 @@ echo "&lt;/pre&gt;"
 # verify that the file exists
 
 if [ -e "$targetname" ]; then
-	open "$targename"
+	open "$targetname"
 	# provide path and link
 
 

@@ -1,4 +1,4 @@
-## Work in Progress ##
+## This is a Work in Progress ##
 
 This bundle is a work in progress. It has many warts, and it is far from complete.
 
@@ -10,6 +10,16 @@ I've scoped pandoc as a flavor of markdown: text.html.markdown.pandoc. This shou
 
 The bundle provides several commands that use pandoc as a kind of pretty printer for markdown: pushing markdown through pandoc allows for each conversion between inline and reference links, for example, and soft or hard-wrapped lines.
 
+## Converting to PDF ##
+
+The commands to convert to PDF do so via ConTeXt, as described on the [Pandoc examples](http://johnmacfarlane.net/pandoc/examples.html) page. Edit them if you prefer to convert to PDF via LaTeX.
+
+## Converting to ODT ##
+
+The command that converts documents to ODT also automatically opens the generated document. On a newer Mac, this should be fine. On an older Mac, this can take a *long* time. If you are using this on an older Mac, you might want to delete the line that says:
+
+    open "$targetname"
+
 ## Drag and Drop Conversions ##
 
 Open a new document in TextMate, set the language to Pandoc, drag a file onto it, and we'll do our best to convert it to Pandoc Markdown.
@@ -18,8 +28,27 @@ Here are the details:
 
 +   HTML, TeX, LaTeX, and RsT files are converted directly by pandoc. Limitations in the conversions are limitations in pandoc. All other files are first converted to HTML, then converted from HTML by pandoc. 
 +   ODT, DOC, DOCX, RTF, RTFD, WORDML, and webarchive files are first converted to html using apple's textutil command. This typically destroys footnotes.
-+   PDF files are first converted to HTML using [pdftohtml](http://pdftohtml.sourceforge.net/), which you'll need to install for yourself.
-+   Support for Mellel files is currently broken. On an old computer somewhere I have a patched version of Malte Rosenau's [mellel2mmd](http://wwwuser.gwdg.de/~mrosena/). It worked from the command line, but since Mellel documents are actually packages, it never worked for dragging and dropping. If you want to convert Mellel documents to Pandoc files, download mellel2mmd and then convert the metadata, either by hand or using the "Convert MMD Metadata to Pandoc Metadata" command provided by this bundle.
++   PDF files are first converted to HTML using [pdftohtml](http://pdftohtml.sourceforge.net/), which you'll have to install.
+
+For converting Mellel files, try Malte Rosenau's [Mellel2MMD.app](http://wwwuser.gwdg.de/~mrosena/). For some reason, the app doesn't support compressed Mellel files. To fix this, replace Mellel2MMD.app/Contents/Resources/script with this:
+
+    #!/bin/bash
+
+    # You can access your bundled files at the following paths:
+    #
+    # "$1/Contents/Resources/mellel2mmd.xsl"
+    #
+    #
+
+    new=`echo "$2" | sed s/mellel$/mmd/g`
+
+    if [ ! -f "$2/main.xml" ]; then 
+    	gunzip "$2/main.xml.gz"
+    fi
+
+    xsltproc -o "$new" "$1/Contents/Resources/mellel2mmd.xsl" "$2/main.xml"
+
+This bundle provides some tools for converting (some aspects of) the resulting MMD file to Pandoc markdown.
 
 ## Citations ##
 
@@ -37,5 +66,6 @@ You must set three variables in Preferences/Advanced/Shell Variables:
 
 If $TM\_PANDOC\_BIB points to a bibtex or mods xml file, then you can use TextMate's autocompletion (type part of a word then hit the ESCAPE key) to complete citation keys. I have no idea how robust this is: I am just using regexps in ruby to find the citation keys.
 
+## MultiMarkdown ##
 
-
+I've included a few commands for quickly converting between MMD syntax and Pandoc syntax. There are commands for converting MMD metadata to and from Pandoc metadata (i.e., the Title Block). There is also a command for converting MMD formatted citations, like `[p. 20][#citekey]` to Pandoc formatted citations, like `[citekey@p. 20]`.
