@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>contactEmailRot13</key>
-	<string>qfnafba@tznvy.pbz</string>
-	<key>contactName</key>
-	<string>David Sanson</string>
-	<key>description</key>
-	<string>Bundle to help editing and converting markdown files using pandoc.</string>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>
@@ -17,22 +11,12 @@
 			<string>9D4C07F6-13CF-4003-B52D-B9556B3CAAF1</string>
 			<string>3E5BCC59-840A-430B-B0D9-B477EC696789</string>
 			<string>E16657DC-41AF-47DA-A90A-20F27C308116</string>
-			<string>1981A055-0C86-4217-957C-B95C7E23F2A9</string>
+			<string>FEF3D4EC-44F5-48AC-AC53-B4E4C4CDC59C</string>
+			<string>E835FDC2-B834-4E66-AE34-50951FCB87F2</string>
 			<string>22451583-6982-4D72-BE0C-784D3E778536</string>
 		</array>
 		<key>submenus</key>
 		<dict>
-			<key>1981A055-0C86-4217-957C-B95C7E23F2A9</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>E835FDC2-B834-4E66-AE34-50951FCB87F2</string>
-					<string>0AD3F1A6-18CD-459E-90F3-D216F6DC2F62</string>
-					<string>56146758-265F-4F83-8322-B77A03E76DB1</string>
-				</array>
-				<key>name</key>
-				<string>Metadata</string>
-			</dict>
 			<key>22451583-6982-4D72-BE0C-784D3E778536</key>
 			<dict>
 				<key>items</key>
@@ -88,6 +72,17 @@
 				<key>name</key>
 				<string>Markdown to Markdown</string>
 			</dict>
+			<key>FEF3D4EC-44F5-48AC-AC53-B4E4C4CDC59C</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>0AD3F1A6-18CD-459E-90F3-D216F6DC2F62</string>
+					<string>56146758-265F-4F83-8322-B77A03E76DB1</string>
+					<string>9D2B64FF-F35F-428B-8751-67BE205EEDE4</string>
+				</array>
+				<key>name</key>
+				<string>MMD and Pandoc</string>
+			</dict>
 		</dict>
 	</dict>
 	<key>name</key>
@@ -118,6 +113,7 @@
 		<string>0E35F798-452C-4D7A-8E67-3741F684C43B</string>
 		<string>56146758-265F-4F83-8322-B77A03E76DB1</string>
 		<string>0AD3F1A6-18CD-459E-90F3-D216F6DC2F62</string>
+		<string>9D2B64FF-F35F-428B-8751-67BE205EEDE4</string>
 		<string>EDAB8365-50F3-44AD-8EE2-0C770E9E05D5</string>
 		<string>D8A2538F-BA09-42BB-AE66-8EF2E1EFA7D8</string>
 		<string>7F988AB9-BC73-4DBD-AC0B-58FD5839E1B5</string>
