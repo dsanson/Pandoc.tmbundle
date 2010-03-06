@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>pandoc -Ss --toc "$TM_BUNDLE_SUPPORT"/doc/cheatsheet.markdown</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~@?</string>
+	<key>name</key>
+	<string>Syntax Cheatsheet</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.html.markdown.pandoc</string>
+	<key>uuid</key>
+	<string>D8A2538F-BA09-42BB-AE66-8EF2E1EFA7D8</string>
+</dict>
+</plist>

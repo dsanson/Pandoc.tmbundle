@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>textutil -convert html -stdout "$TM_DROPPED_FILE" | pandoc -s --no-wrap --reference-links</string>
+	<key>draggedFileExtensions</key>
+	<array>
+		<string>odt</string>
+		<string>doc</string>
+		<string>docx</string>
+		<string>rtf</string>
+		<string>rtfd</string>
+		<string>wordml</string>
+		<string>webarchive</string>
+	</array>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Convert from ODT, DOC, DOCX, RTF, RTFD, WORDML, webarchive</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>text.html.markdown.pandoc</string>
+	<key>uuid</key>
+	<string>9981E275-CC9E-463D-8642-BAE64A216B8D</string>
+</dict>
+</plist>

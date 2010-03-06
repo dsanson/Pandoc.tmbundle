@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Autocomplete citation</string>
+	<key>scope</key>
+	<string>text.html.markdown.pandoc</string>
+	<key>settings</key>
+	<dict>
+		<key>completionCommand</key>
+		<string>#!/usr/bin/env ruby
+bib = ENV["TM_PANDOC_BIB"]
+phrase = ENV["TM_CURRENT_WORD"]
+File.open(bib) { |file|
+  text = file.read
+  keys = text.scan(/@.*?\{(#{phrase}.*?),/i)
+  keys = keys + text.scan(/&lt;mods ID=\"(.*?)\"&gt;/i)
+  keys.uniq!
+  keys.sort!
+  puts keys
+}</string>
+	</dict>
+	<key>uuid</key>
+	<string>49966503-D87F-456D-BE8D-886E7B9267E0</string>
+</dict>
+</plist>

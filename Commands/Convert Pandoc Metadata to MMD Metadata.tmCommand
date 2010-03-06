@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env perl
+
+#
+# This is a simple script that converts pandoc metadata to multimarkdown
+# metadata.
+#
+
+
+my $title, $author, $date;
+
+undef $/;
+$text .= &lt;&gt;;
+
+@lines = split /\n/, $text;
+
+$line = shift @lines;
+
+if ( $line =~ /^%\s*(.*)$/ ) {
+	$title = $1;
+	print "Title: $title\n";
+	$line = shift @lines;		
+	if ( $line =~ /^%\s*(.*)$/ ) {
+		$author = $1;
+		print "Author: $author\n";
+		$line = shift @lines;	
+		if ( $line =~ /^%\s*(.*)$/ ) {
+			$date = $1;
+			print "Date: $date\n";
+		}
+		else {
+			print "$line\n";
+		}
+	}
+	else {
+		print "$line\n";
+	}
+} 
+else {
+	print "$line\n";
+}
+
+print join "\n", @lines;
+print "\n";</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Convert Pandoc Metadata to MMD Metadata</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.html.markdown.pandoc</string>
+	<key>uuid</key>
+	<string>56146758-265F-4F83-8322-B77A03E76DB1</string>
+</dict>
+</plist>

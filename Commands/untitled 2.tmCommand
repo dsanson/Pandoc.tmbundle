@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>html2markdown $TM_SELECTED_TEXT</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Convert from URL</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>uuid</key>
+	<string>C8A41311-5DBC-4546-9940-18597760A860</string>
+</dict>
+</plist>

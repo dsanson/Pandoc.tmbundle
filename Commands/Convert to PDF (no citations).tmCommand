@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/bin/sh
+
+filename=$TM_FILEPATH
+basename=${filename%.*}
+if [ -f "$basename.tex" ]; then
+   cp "$basename.tex" "$basename-old.tex"
+fi
+if [ -f "$basename.pdf" ]; then
+   cp "$basename.pdf" "$basename-old.pdf"
+fi
+echo "&lt;pre&gt;
+pandoc -w context -sS "$@" &gt; $basename.tex 
+texexec --purgeall --pdf $basename.tex
+open $basename.pdf
+&lt;/pre&gt;</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^~@p</string>
+	<key>name</key>
+	<string>Convert to PDF (no citations)</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.html.markdown.pandoc</string>
+	<key>uuid</key>
+	<string>0AF6F61D-7FB0-4016-A4C2-79F3DEE1B635</string>
+</dict>
+</plist>

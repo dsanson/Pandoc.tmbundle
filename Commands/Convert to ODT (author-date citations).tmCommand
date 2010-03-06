@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string># $TM_FILEPATH: full path of current doc
+
+filename=${TM_FILEPATH}
+basename=${filename%.*}
+
+# Find a unique name
+
+inc=""
+connective=""
+if [ -e "$basename.odt" ]; then
+	connective="-"
+	inc=1
+	while [ -e "$basename$connective$inc.odt" ]; do
+		let "inc++"
+	done
+fi
+targetname="$basename$connective$inc.odt"
+
+# run pandoc
+
+echo "&lt;pre&gt;"
+	pandoc -sS -o "$targetname" --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL
+echo "&lt;/pre&gt;"
+
+# verify that the file exists
+
+if [ -e "$targetname" ]; then
+	open "$targename"
+	# provide path and link
+
+
+	cat &lt;&lt;END
+&lt;p&gt;Your document has been saved as:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="javascript:TextMate.system('/usr/bin/open $targetname', null);"&gt;$targetname&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;The above link won't work if the path contains spaces&lt;/p&gt;
+END
+
+else
+	echo "The file wasn't created. Something went wrong."
+fi</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^~@o</string>
+	<key>name</key>
+	<string>Convert to ODT (citations)</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.html.markdown.pandoc</string>
+	<key>uuid</key>
+	<string>6238103B-D750-49FA-8C9C-B4078167C204</string>
+</dict>
+</plist>
