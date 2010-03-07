@@ -14,7 +14,11 @@
 
 filename=${TM_FILEPATH}
 basename=${filename%.*}
-mkdir "$basename"_split
+if [ -d "$basename_split" ]; then
+	mv "$basename_split" "$basename_split_old"
+else
+	mkdir "$basename"_split
+fi
 csplit -sk -f "$basename"_split/xx - "/^##*/" "{99}"
 rename "s/(.*)/\1.markdown/" "$basename"_split/xx*
 open -a "TextMate" "$basename"_split</string>
