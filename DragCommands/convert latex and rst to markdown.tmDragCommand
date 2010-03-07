@@ -5,12 +5,24 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -s --no-wrap --reference-links -t markdown "$TM_DROPPED_FILE"</string>
+	<string>format=html
+extension=${TM_DROPPED_FILE##*.}
+
+case $extension in
+    latex )
+        format=latex ;;
+    tex )
+        format=latex ;;
+    rst )
+	   format=rst ;;
+esac
+pandoc -f $format -s --no-wrap --reference-links -t markdown "$TM_DROPPED_FILE"</string>
 	<key>draggedFileExtensions</key>
 	<array>
 		<string>tex</string>
 		<string>rst</string>
 		<string>latex</string>
+		<string>html</string>
 	</array>
 	<key>input</key>
 	<string>selection</string>
