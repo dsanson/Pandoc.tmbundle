@@ -72,7 +72,7 @@ I tried to come up with a command to convert Mellel files on drag and drop, but 
 
 Commands for processing citations will only work if you have compiled pandoc with citeproc support. I recommend applying [wazzeb's patch](http://code.google.com/p/citeproc-hs/issues/detail?id=4)  to citeproc-hs, which fixes a variety of small issues and adds support for multiple bibliography formats (relying on  [bibutils](http://www.scripps.edu/~cdputnam/software/bibutils/)) for those of us who haven't been able to compile citeproc-hs with hs-bibutils support built-in.
 
-You must set three variables in Preferences/Advanced/Shell Variables:
+You must set three variables in Preferences -> Advanced -> Shell Variables:
 
 +   $TM\_PANDOC\_BIB: the path of the bibliography database you want to use. (If the bundle were smarter it would fall back to $TM\_LATEX\_BIB if this variable was not set. But for now, it doesn't.)
 +   $TM\_PANDOC\_BIBTYPE: to the type of database: mods or bibtex, for example. 
