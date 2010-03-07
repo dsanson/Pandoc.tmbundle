@@ -2,7 +2,7 @@
 
 This bundle is a work in progress. It has many warts, and it is far from complete.
 
-The Language Syntax, for example, has been shamelessly plundered from Fletcher Penney's [MultiMarkdown Bundle](http://fletcherpenney.net/multimarkdown/multimarkdown_bundle_for_textm/). I've made a few changes, but I've made not attempt to systematically change it to account for differences between pandoc and mmd.
+The Language Syntax, for example, has been shamelessly plundered from Fletcher Penney's [MultiMarkdown Bundle](http://fletcherpenney.net/multimarkdown/multimarkdown_bundle_for_textm/). I've made a few changes, but I've made no attempt to systematically change it to account for differences between pandoc and mmd.
 
 ## Scope ##
 
