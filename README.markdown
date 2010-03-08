@@ -4,9 +4,11 @@ This bundle is a work in progress. It has many warts, and it is far from complet
 
 ## Language ##
 
-For the Language, I shamelessly plundered Fletcher Penney's [MultiMarkdown Bundle](http://fletcherpenney.net/multimarkdown/multimarkdown_bundle_for_textm/). I've made a few changes, but I've made no attempt to systematically change it to account for differences between pandoc and mmd. This also means that Fletcher Penney's [MultiMarkdown Theme](http://files.fletcherpenney.net/MultiMarkdown.tmTheme.zip) should also work reasonably well. It also means that some things won't work quite right.
+For the Language syntax, I shamelessly stole Fletcher Penney's [MultiMarkdown Bundle](http://fletcherpenney.net/multimarkdown/multimarkdown_bundle_for_textm/), which is a slightly modified version of the syntax file from the original Markdown plugin. Since several of the MMD extensions are the same as the Pandoc extensions, this works okay. I've made a few changes, but I've made no attempt to systematically change it to account for differences between Pandoc's extensions to Markdown and MMD's extensions to Markdown. 
 
-It would be better to have a clean and complete Language specification for Pandoc. I just haven't bothered to do it.
+I find that Fletcher Penney's [MultiMarkdown Theme](http://files.fletcherpenney.net/MultiMarkdown.tmTheme.zip)  works reasonably well with the modified language file.
+
+It would be better to have a clean and complete Language specification for Pandoc's extended Markdown. I just haven't bothered to do it.
 
 ## Scope ##
 
