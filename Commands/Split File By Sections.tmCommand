@@ -14,8 +14,8 @@
 
 filename=${TM_FILEPATH}
 basename=${filename%.*}
-if [ -d "$basename_split" ]; then
-	mv "$basename_split" "$basename_split_old"
+if [ -d "$basename"_split ]; then
+	mv "$basename"_split "$basename"_split_old
 else
 	mkdir "$basename"_split
 fi

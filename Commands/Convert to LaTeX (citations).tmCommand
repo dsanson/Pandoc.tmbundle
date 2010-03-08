@@ -5,18 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -Ss -w latex </string>
+	<string>pandoc -sS -w latex --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
 	<string>^~@l</string>
 	<key>name</key>
-	<string>Convert to LaTeX (no citations)</string>
+	<string>Convert to LaTeX (citations)</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>scope</key>
 	<string>text.html.markdown.pandoc</string>
 	<key>uuid</key>
-	<string>132A7DFF-E366-4A3A-93A1-F6EA8534CC03</string>
+	<string>474C6A24-452A-4372-A7FC-9A65FE244C42</string>
 </dict>
 </plist>
