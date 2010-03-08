@@ -1,6 +1,10 @@
 ## This is a Work in Progress ##
 
-This bundle is a work in progress. It has many warts, and it is far from complete.
+This bundle is a work in progress. It has many warts, and it is far from complete. It is idiosyncratic in ways that it shouldn't be. Some commands are probably broken.
+
+Of course, I suspect everyone will want to tweak their own copy to suit their own needs. Anyone using Pandoc and TextMate has probably already rolled their own set of simple commands. The goal here should be, I think, to provide a reasonable set of commands and options to help get people started. 
+
+Fixes, improvements, ideas, complete overhauls, all welcome.
 
 ## Language ##
 
