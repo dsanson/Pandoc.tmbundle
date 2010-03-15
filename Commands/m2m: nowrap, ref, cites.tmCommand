@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -t markdown --no-wrap --reference-links --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL</string>
+	<string>pandoc -s -t markdown --no-wrap --reference-links --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>

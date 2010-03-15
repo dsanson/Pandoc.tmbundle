@@ -15,11 +15,11 @@ fi
 if [ -f "$basename.pdf" ]; then
    cp "$basename.pdf" "$basename-old.pdf"
 fi
-echo "&lt;pre&gt;
+echo "&lt;pre&gt;"
 pandoc -w context -sS "$@" &gt; $basename.tex 
 texexec --purgeall --pdf $basename.tex
 open $basename.pdf
-&lt;/pre&gt;</string>
+echo "&lt;/pre&gt;"</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>

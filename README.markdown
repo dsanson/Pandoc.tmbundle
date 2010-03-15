@@ -16,9 +16,9 @@ It would be better to have a clean and complete Language specification for Pando
 
 ## Scope ##
 
-I've scoped pandoc as a flavor of markdown: text.html.markdown.pandoc. So if you have a markdown bundle installed, those commands should also work in this bundle. 
+I've scoped Pandoc as a flavor of markdown: text.html.markdown.pandoc. So if you have a markdown bundle installed, those commands should also work in this bundle. 
 
-I guess this makes sense for those who use markdown as an easy way to write HTML. I find I'm more likely to use it as an easy way to write LaTeX or ConTeXt, which suggests changing the scope to something like text.tex.markdown.pandoc.
+I guess this makes sense for those who use markdown as an easy way to write HTML. I find I'm more likely to use it as an easy way to write LaTeX or ConTeXt, which suggests changing the scope to something like text.tex.markdown.pandoc, so as to inherit commands and syntax from the LaTeX bundle instead of the HTML bundle. Those with greater TextMate fu might have a better sense of how to think about this. 
 
 ## Paths ##
 
