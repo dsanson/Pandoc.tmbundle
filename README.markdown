@@ -100,10 +100,14 @@ For smoother integration with TextMate, one can replace Mellel2MMD.app/Contents/
     else
         gunzip -c "$2/main.xml.gz" | xsltproc -o "$new" "$1/Contents/Resources/mellel2mmd.xsl" -
     fi
+    mate -r "$new"
+
+If you don't have the 'mate' command installed (if you are reading this, you should!), make that last line
+
     open -a "TextMate" "$new"
 
-This will alter the behavior of Mellel2MMD.app in three ways:
+instead. This will alter the behavior of Mellel2MMD.app in three ways:
 
-+   it will handle compressed Mellel files without complaint
++   <s>it will handle compressed Mellel files without complaint</s> (Mellel2MMD.app now does this.)
 +   it will save the new file with the .markdown extension rather than the .mmd extension. (Set $mdext to your preferred extension.)
 +   it will automatically open the new file in TextMate.
