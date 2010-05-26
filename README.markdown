@@ -1,6 +1,6 @@
 ## This is a Work in Progress ##
 
-This bundle is a work in progress. It has many warts, and it is far from complete. It is idiosyncratic in ways that it shouldn't be. Some commands are probably broken.
+This bundle is a work in progress. It has many warts, and it is far from complete. It is idiosyncratic in ways that it shouldn't be. Some commands are probably broken. It makes use of hackish regexs when it could use [elegant haskell scripts](http://johnmacfarlane.net/pandoc/scripting.html).
 
 I suspect anyone who uses Pandoc with Textmate will want a bundle tweaked to suit their own needs, and that many of us have already rolled our own sets of simple commands. I have two goals for this bundle, which aren't entirely compatible:
 
@@ -9,7 +9,7 @@ I suspect anyone who uses Pandoc with Textmate will want a bundle tweaked to sui
 
 This probably means that the bundle should eventually be organized into "basic" and "advanced" sections.
 
-Fixes, forks, improvements, ideas, complete overhauls, all welcome.
+Fixes, forks, improvements, ideas, complete overhauls, all welcome. 
 
 ## Language ##
 
