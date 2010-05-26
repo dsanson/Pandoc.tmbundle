@@ -5,18 +5,16 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -sS </string>
+	<string># Adapted from the wonderful Outlines Bundle
+
+perl -pe 's/^(\s*)/\1-   /'</string>
 	<key>input</key>
 	<string>selection</string>
-	<key>keyEquivalent</key>
-	<string>^~@p</string>
 	<key>name</key>
-	<string>Preview as HTML</string>
+	<string>Tabs to Bullets</string>
 	<key>output</key>
-	<string>showAsHTML</string>
-	<key>scope</key>
-	<string>text.html.markdown.pandoc</string>
+	<string>replaceSelectedText</string>
 	<key>uuid</key>
-	<string>BC891659-5D4C-431C-A806-D7A26377E3EE</string>
+	<string>A2527DED-32A3-4E5D-A09D-6545790F11FB</string>
 </dict>
 </plist>

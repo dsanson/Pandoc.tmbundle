@@ -11,7 +11,7 @@
 	<key>keyEquivalent</key>
 	<string>^~@h</string>
 	<key>name</key>
-	<string>Convert to HTML (no citations)</string>
+	<string>Convert to Standalone HTML</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>scope</key>

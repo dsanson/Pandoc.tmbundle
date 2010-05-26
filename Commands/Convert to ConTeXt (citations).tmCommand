@@ -5,18 +5,16 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -sS </string>
+	<string>pandoc -Ss -w context </string>
 	<key>input</key>
 	<string>selection</string>
-	<key>keyEquivalent</key>
-	<string>^~@p</string>
 	<key>name</key>
-	<string>Preview as HTML</string>
+	<string>Convert to ConTeXt (citations)</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>openAsNewDocument</string>
 	<key>scope</key>
 	<string>text.html.markdown.pandoc</string>
 	<key>uuid</key>
-	<string>BC891659-5D4C-431C-A806-D7A26377E3EE</string>
+	<string>75BB501B-4D6C-46F1-B2C3-DA2848921FD3</string>
 </dict>
 </plist>

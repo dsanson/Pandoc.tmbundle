@@ -9,7 +9,7 @@
 	<key>input</key>
 	<string>selection</string>
 	<key>name</key>
-	<string>Convert to ConTeXt (no citations)</string>
+	<string>Convert to ConTeXt</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>scope</key>

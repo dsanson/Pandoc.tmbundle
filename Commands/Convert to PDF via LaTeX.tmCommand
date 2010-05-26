@@ -3,20 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>nop</string>
+	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>pandoc -sS </string>
+	<string>#!/bin/sh
+
+filename=$TM_FILEPATH
+basename=${filename%.*}
+if [ -f "$basename.tex" ]; then
+   cp "$basename.tex" "$basename-old.tex"
+fi
+if [ -f "$basename.pdf" ]; then
+   cp "$basename.pdf" "$basename-old.pdf"
+fi
+echo "&lt;pre&gt;"
+pandoc -w latex -sS &gt; $basename.tex
+pdflatex $basename.tex
+open $basename.pdf
+echo "&lt;/pre&gt;"</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
 	<string>^~@p</string>
 	<key>name</key>
-	<string>Preview as HTML</string>
+	<string>Convert to PDF via LaTeX</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
 	<string>text.html.markdown.pandoc</string>
 	<key>uuid</key>
-	<string>BC891659-5D4C-431C-A806-D7A26377E3EE</string>
+	<string>5623E00B-B49D-44B5-A37D-DBD6261E2FA1</string>
 </dict>
 </plist>

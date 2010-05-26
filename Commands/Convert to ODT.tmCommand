@@ -49,7 +49,7 @@ fi</string>
 	<key>keyEquivalent</key>
 	<string>^~@o</string>
 	<key>name</key>
-	<string>Convert to ODT (no citations)</string>
+	<string>Convert to ODT</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>

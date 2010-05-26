@@ -16,8 +16,8 @@ if [ -f "$basename.pdf" ]; then
    cp "$basename.pdf" "$basename-old.pdf"
 fi
 echo "&lt;pre&gt;"
-pandoc -w context -sS &gt; $basename.tex 
-texexec --purgeall --pdf $basename.tex
+pandoc -w latex -sS --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL &gt; $basename.tex
+pdflatex $basename.tex
 open $basename.pdf
 echo "&lt;/pre&gt;"</string>
 	<key>input</key>
@@ -25,12 +25,12 @@ echo "&lt;/pre&gt;"</string>
 	<key>keyEquivalent</key>
 	<string>^~@p</string>
 	<key>name</key>
-	<string>Convert to PDF via ConTeXt</string>
+	<string>Convert to PDF via LaTeX (citations)</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
 	<string>text.html.markdown.pandoc</string>
 	<key>uuid</key>
-	<string>0AF6F61D-7FB0-4016-A4C2-79F3DEE1B635</string>
+	<string>B6A43DBC-AC7B-40CF-B272-A841892E14CD</string>
 </dict>
 </plist>

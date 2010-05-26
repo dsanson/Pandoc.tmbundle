@@ -11,7 +11,7 @@
 	<key>keyEquivalent</key>
 	<string>^~@m</string>
 	<key>name</key>
-	<string>Convert from HTML</string>
+	<string>HTML to Markdown</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>scope</key>

@@ -12,7 +12,7 @@
 	<key>keyEquivalent</key>
 	<string>^~@h</string>
 	<key>name</key>
-	<string>Convert to HTML (citations)</string>
+	<string>Convert to Standalone HTML (citations)</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>scope</key>

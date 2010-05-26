@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>textutil -convert html -stdout "$TM_DROPPED_FILE" | pandoc -s --no-wrap --reference-links</string>
+	<string>textutil -convert html -stdout "$TM_DROPPED_FILE" | pandoc -t markdown -s --no-wrap --reference-links</string>
 	<key>draggedFileExtensions</key>
 	<array>
 		<string>odt</string>

@@ -6,10 +6,12 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>pandoc -f html "$TM_SELECTED_TEXT"</string>
+	<key>fallbackInput</key>
+	<string>none</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>name</key>
-	<string>Convert from URL</string>
+	<string>Download selected URL and convert to Markdown</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>uuid</key>
