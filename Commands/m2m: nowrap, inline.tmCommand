@@ -9,7 +9,7 @@
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
-	<string>^~@c</string>
+	<string>^~@t</string>
 	<key>name</key>
 	<string>Unwrap and Inline Links Document / Selection</string>
 	<key>output</key>

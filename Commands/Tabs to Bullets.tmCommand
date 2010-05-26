@@ -5,7 +5,9 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># Adapted from the wonderful Outlines Bundle
+	<string># Adapted from the wonderful Outlines Bundle, modified
+# so that the conversion looks more like the bullets pandoc
+# generates. 
 
 perl -pe 's/^(\s*)/\1-   /'</string>
 	<key>input</key>

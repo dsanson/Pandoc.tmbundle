@@ -8,6 +8,8 @@
 	<string>pandoc -Ss -w context </string>
 	<key>input</key>
 	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^~@c</string>
 	<key>name</key>
 	<string>Convert to ConTeXt</string>
 	<key>output</key>

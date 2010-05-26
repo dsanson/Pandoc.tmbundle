@@ -10,8 +10,7 @@
 			<string>51483E7C-0AED-4391-A5F2-C15A51075D8E</string>
 			<string>5C179C7F-7DE7-4938-B321-CDEAF8ED7AB1</string>
 			<string>9ADEFA96-75B7-490C-9790-7423EF423BCF</string>
-			<string>8E58742F-7F16-4AFC-B3A3-374BC5BBB5ED</string>
-			<string>B7E55E21-D63C-4A7A-904F-7E566585F447</string>
+			<string>A2527DED-32A3-4E5D-A09D-6545790F11FB</string>
 			<string>9D4C07F6-13CF-4003-B52D-B9556B3CAAF1</string>
 			<string>3E5BCC59-840A-430B-B0D9-B477EC696789</string>
 			<string>E16657DC-41AF-47DA-A90A-20F27C308116</string>
@@ -25,7 +24,6 @@
 			<dict>
 				<key>items</key>
 				<array>
-					<string>EDAB8365-50F3-44AD-8EE2-0C770E9E05D5</string>
 					<string>D8A2538F-BA09-42BB-AE66-8EF2E1EFA7D8</string>
 					<string>7F988AB9-BC73-4DBD-AC0B-58FD5839E1B5</string>
 				</array>
@@ -53,7 +51,7 @@
 					<string>A159701F-7F2B-4732-BEB5-0119ECCCCF62</string>
 				</array>
 				<key>name</key>
-				<string>Convert from Markdown</string>
+				<string>Convert</string>
 			</dict>
 			<key>9D4C07F6-13CF-4003-B52D-B9556B3CAAF1</key>
 			<dict>
@@ -65,15 +63,6 @@
 				</array>
 				<key>name</key>
 				<string>Preview</string>
-			</dict>
-			<key>B7E55E21-D63C-4A7A-904F-7E566585F447</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>ED6332E1-BDBF-44CC-B0B4-84FC32A15745</string>
-				</array>
-				<key>name</key>
-				<string>Convert to Markdown</string>
 			</dict>
 			<key>E16657DC-41AF-47DA-A90A-20F27C308116</key>
 			<dict>
@@ -87,7 +76,7 @@
 					<string>3DCF842F-EBDD-458C-A12F-92C5B75F5FBB</string>
 				</array>
 				<key>name</key>
-				<string>Markdown to Markdown</string>
+				<string>Markdown Tidy</string>
 			</dict>
 			<key>FEF3D4EC-44F5-48AC-AC53-B4E4C4CDC59C</key>
 			<dict>
@@ -136,9 +125,9 @@
 		<string>56146758-265F-4F83-8322-B77A03E76DB1</string>
 		<string>0AD3F1A6-18CD-459E-90F3-D216F6DC2F62</string>
 		<string>9D2B64FF-F35F-428B-8751-67BE205EEDE4</string>
-		<string>EDAB8365-50F3-44AD-8EE2-0C770E9E05D5</string>
 		<string>D8A2538F-BA09-42BB-AE66-8EF2E1EFA7D8</string>
 		<string>7F988AB9-BC73-4DBD-AC0B-58FD5839E1B5</string>
+		<string>C1C88133-ED0B-4C51-8AC7-523A8C7727F6</string>
 		<string>5B04F3EF-FF85-4C10-B764-9DA05B1D16D1</string>
 		<string>9981E275-CC9E-463D-8642-BAE64A216B8D</string>
 		<string>CA7965ED-7D83-44F8-A54A-0C79A1EF3D64</string>

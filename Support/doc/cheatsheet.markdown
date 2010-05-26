@@ -130,8 +130,8 @@ or
 
 ### Blockquotes
 
->   blockquote
->>  nested blockquote
+    >   blockquote
+    >>  nested blockquote
 
 Blank lines required before and after blockquotes.
 
