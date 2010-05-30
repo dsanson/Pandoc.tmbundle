@@ -16,8 +16,7 @@ if [ -f "$basename.pdf" ]; then
    cp "$basename.pdf" "$basename-old.pdf"
 fi
 echo "&lt;pre&gt;"
-pandoc -w latex -sS --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL &gt; $basename.tex
-pdflatex $basename.tex
+markdown2pdf --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL -o $basename.pdf
 open $basename.pdf
 echo "&lt;/pre&gt;"</string>
 	<key>input</key>
