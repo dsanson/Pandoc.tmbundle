@@ -1,3 +1,9 @@
+# Pandoc TextMate Bundle README
+
+This is a TextMate bundle for use with John MacFarlane's [pandoc](http://johnmacfarlane.net/pandoc). Pandoc is a command line tool that converts files from one markup format to another. It is a powerful tool that can be used in many ways for many purposes. 
+
+I write most documents in Pandoc's extended Markdown syntax. This bundle was put together to serve the needs of someone doing that. It focuses on commands for converting existing documents into Pandoc's markdown format and commands for exporting documents written in Pandoc's markdown format to HTML, LaTeX, ConTeXt, PDF, and ODT.
+
 ## This is a Work in Progress ##
 
 This bundle is a work in progress. It has many warts, and it is far from complete. It is idiosyncratic in ways that it shouldn't be. Some commands are probably broken. It makes use of hackish regexs when it could use [elegant haskell scripts](http://johnmacfarlane.net/pandoc/scripting.html).
@@ -27,7 +33,11 @@ I guess this makes sense for those who use markdown as an easy way to write HTML
 
 ## Paths ##
 
-You may need to set the PATH variable in TextMates Preferences -> Advanced -> Shell Variables to include the path to pandoc.
+You may need to set the PATH variable in TextMate's Preferences -> Advanced -> Shell Variables to include the path to pandoc.
+
+## Locale ##
+
+If you get a "hGetContents: invalid argument (Illegal byte sequence)" error, you need to set the LANG variable in TextMate's Preferences -> Advanced -> Shell Variables to something like "en_US.UTF-8". See [this thread](https://groups.google.com/group/pandoc-discuss/browse_thread/thread/3c5c156ac60a3f5a) for details.
 
 ## Citations ##
 

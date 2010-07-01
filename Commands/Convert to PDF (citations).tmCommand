@@ -16,9 +16,7 @@ if [ -f "$basename.pdf" ]; then
    cp "$basename.pdf" "$basename-old.pdf"
 fi
 echo "&lt;pre&gt;"
-pandoc -w context -sS --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL  &gt; $basename.tex 
-texexec --purgeall --pdf $basename.tex
-open $basename.pdf
+pandoc -w context -sS --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL  &gt; $basename.tex &amp;&amp; texexec --purgeall --pdf $basename.tex &amp;&amp; open $basename.pdf
 echo "&lt;/pre&gt;"</string>
 	<key>input</key>
 	<string>selection</string>
