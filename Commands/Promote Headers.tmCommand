@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># this calls a compiled haskell program. The source is in the
+# Pandoc.tmbundle/Support/bin
+
+promoteheaders</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Promote Headers</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.html.markdown</string>
+	<key>uuid</key>
+	<string>2D750012-6DA0-43B8-B443-1AD019D5EF5B</string>
+</dict>
+</plist>
