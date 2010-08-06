@@ -8,11 +8,12 @@
 	<string>#!/usr/bin/env ruby
 
 meta = 1
+width = ENV['TM_COLUMNS'].to_i
 
 ARGF.each do |line|
     if line =~ /^%/ &amp;&amp; meta 
         line.slice!(/%\s+/)
-        line = line.chomp.center(78)
+        line = line.chomp.center(width)
         line.slice!(/\s+$/)
 	   puts "%" + line
     else
