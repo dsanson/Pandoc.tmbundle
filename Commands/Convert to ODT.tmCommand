@@ -7,8 +7,8 @@
 	<key>command</key>
 	<string># $TM_FILEPATH: full path of current doc
 
-filename=${TM_FILEPATH}
-basename=${filename%.*}
+filename="${TM_FILEPATH}"
+basename="${filename%.*}"
 
 # Find a unique name
 

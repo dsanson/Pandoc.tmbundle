@@ -7,8 +7,9 @@
 	<key>command</key>
 	<string>#!/bin/sh
 
-filename=$TM_FILEPATH
-basename=${filename%.*}
+opts="$TM_PANDOC_OPTS"
+filename="$TM_FILEPATH"
+basename="${filename%.*}"
 if [ -f "$basename.tex" ]; then
    cp "$basename.tex" "$basename-old.tex"
 fi
@@ -16,7 +17,7 @@ if [ -f "$basename.pdf" ]; then
    cp "$basename.pdf" "$basename-old.pdf"
 fi
 echo "&lt;pre&gt;"
-pandoc -w context -sS &gt; $basename.tex &amp;&amp; texexec --purgeall --pdf $basename.tex &amp;&amp; open $basename.pdf
+pandoc $opts -w context -sS &gt; "$basename.tex" &amp;&amp; texexec --purgeall --pdf "$basename.tex" &amp;&amp; open "$basename.pdf"
 echo "&lt;/pre&gt;"</string>
 	<key>input</key>
 	<string>selection</string>
