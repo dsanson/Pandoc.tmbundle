@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>date=`date "+%B %d, %Y"`
+sed "3 s/%.*/% $date/"</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>Freshen Date</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>2A36A05A-3AD4-4B4F-9A49-CE8265100968</string>
+</dict>
+</plist>
