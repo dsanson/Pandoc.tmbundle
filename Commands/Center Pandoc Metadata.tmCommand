@@ -6,6 +6,10 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
+#
+# This script centers pandoc title blocks
+# to make them look nice.
+#
 
 meta = 1
 width = ENV['TM_COLUMNS'].to_i
@@ -25,7 +29,7 @@ end
 	<key>input</key>
 	<string>document</string>
 	<key>name</key>
-	<string>Center Pandoc Metadata</string>
+	<string>Center Title Block</string>
 	<key>output</key>
 	<string>replaceDocument</string>
 	<key>scope</key>

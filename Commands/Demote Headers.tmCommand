@@ -5,7 +5,8 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># this calls a compiled haskell program. The source is in the
+	<string># this calls a compiled haskell program. 
+# The source is in the
 # Pandoc.tmbundle/Support/bin
 
 demoteheaders</string>

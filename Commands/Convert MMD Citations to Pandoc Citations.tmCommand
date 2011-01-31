@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>perl -pe 's/\[\]\[#(.*?)\]/[$1]/g' | perl -pe 's/\[(.*?)\]\[#(.*?)\]/[$2\@$1]/g'
+	<string>perl -pe 's/\[\]\[#(.*?)\]/[@$1]/g' | perl -pe 's/\[(.*?)\]\[\#(.*?)\]/[\@$2, $1]/g'
 
 </string>
 	<key>input</key>

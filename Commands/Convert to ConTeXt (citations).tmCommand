@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -Ss -w context </string>
+	<string>pandoc -Ss -w context --bibliography=$TM_PANDOC_BIB</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>

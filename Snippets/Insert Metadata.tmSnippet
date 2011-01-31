@@ -9,7 +9,7 @@
 	<key>keyEquivalent</key>
 	<string>~@m</string>
 	<key>name</key>
-	<string>Insert Metadata</string>
+	<string>Insert Title Block</string>
 	<key>tabTrigger</key>
 	<string>new</string>
 	<key>uuid</key>

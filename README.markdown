@@ -43,52 +43,72 @@ If you get a "hGetContents: invalid argument (Illegal byte sequence)" error, you
 
 ### Processing of Citations ###
 
-Commands for processing citations will only work if you have compiled pandoc with citeproc support. I recommend applying [wazzeb's patch](http://code.google.com/p/citeproc-hs/issues/detail?id=4)  to citeproc-hs, which fixes a variety of small issues and adds support for multiple bibliography formats (relying on  [bibutils](http://www.scripps.edu/~cdputnam/software/bibutils/)) for those of us who haven't been able to compile citeproc-hs with hs-bibutils support built-in.
-
-> Maybe this advice is outdated? I know that progress is being made on improving citeproc-hs, but I haven't been keeping up. (May 26, 2010)
-
-You must set three variables in Preferences -> Advanced -> Shell Variables:
+You must set the following variable in Preferences -> Advanced -> Shell Variables:
 
 +   $TM\_PANDOC\_BIB: the path of the bibliography database you want to use. (If the bundle were smarter it would fall back to $TM\_LATEX\_BIB if this variable was not set. But for now, it doesn't.)
-+   $TM\_PANDOC\_BIBTYPE: to the type of database: mods or bibtex, for example. 
-+   $TM\_PANDOC\_CSL: the path to the CSL style file you want to use.
 
-### Autocompletion of Citations ###
+### Autocompletion of Citation Keys ###
 
 If $TM\_PANDOC\_BIB points to a bibtex or mods xml file, then you can use TextMate's autocompletion (type part of a word then hit the ESCAPE key) to complete citation keys. I have no idea how robust this is: I am just using regexps in ruby to find the citation keys. It shouldn't be hard to expand support for other bibliography formats.
 
-## Conversions
 
-The conversion commands should be self-explanatory. The commands in the bundle reflect the conversions I am most likely to do. A more complete set of commands should be included.
+## Markdown Tidy
 
-### Markdown Tidy ###
+The bundle provides several commands that use pandoc as a kind of
+pretty printer for markdown: pushing markdown through pandoc allows
+for each conversion between inline and reference links, for
+example, and soft or hard-wrapped lines. It also cleans up bullets
+and lists nicely.
 
-The bundle provides several commands that use pandoc as a kind of pretty printer for markdown: pushing markdown through pandoc allows for each conversion between inline and reference links, for example, and soft or hard-wrapped lines. It also cleans up bullets and lists nicely.
+## MultiMarkdown
 
-### MultiMarkdown ###
+I've included a few commands for quickly converting between MMD
+syntax and Pandoc syntax where the two come apart. There are
+commands for converting MMD metadata to and from Pandoc metadata
+(i.e., the Title Block). There is also a command for converting MMD
+formatted citations, like `[p. 20][#citekey]` to Pandoc formatted
+citations, like `[citekey@p. 20]`.
 
-I've included a few commands for quickly converting between MMD syntax and Pandoc syntax. There are commands for converting MMD metadata to and from Pandoc metadata (i.e., the Title Block). There is also a command for converting MMD formatted citations, like `[p. 20][#citekey]` to Pandoc formatted citations, like `[citekey@p. 20]`. 
+## Converting to ODT
 
-### Converting to PDF ###
-
-There are commands to convert to PDF via LaTeX and commands to convert to PDF via ConTeXt. These commands will automatically open the PDF in your preferred reader.
-
-### Converting to ODT ###
-
-The command that converts documents to ODT also automatically opens the generated document. On a newer Mac, this should be fine. On an older Mac, this can take a *long* time. If you are using this on an older Mac, you might want to delete/comment out the line that says:
+The command that converts documents to ODT also automatically opens
+the generated document. On a newer Mac, this should be fine. On an
+older Mac, this can take a *long* time. If you are using this on an
+older Mac, you might want to delete/comment out the line that
+says:
 
     open "$targetname"
 
-### Drag and Drop Conversions ###
+## Drag and Drop Conversions
 
-Open a new document in TextMate, set the language to Pandoc, drag a file onto it, and the bundle will try to convert it to Pandoc Markdown.
+Open a new document in TextMate, set the language to Pandoc, drag a
+file onto it, and the bundle will try to convert it to Pandoc
+Markdown.
 
 Here are the details:
 
-+   HTML, TeX, LaTeX, and RsT files are converted directly by pandoc. Limitations in the conversions are limitations in pandoc. All other files are first converted to HTML, then converted from HTML by pandoc. 
-+   ODT, DOC, DOCX, RTF, RTFD, WORDML, and webarchive files are first converted to html using apple's textutil command. This typically destroys footnotes. YMMV.
-+   PDF files are first converted to HTML using [pdftohtml](http://pdftohtml.sourceforge.net/), which you'll have to install.
+-   HTML, TeX, LaTeX, and RsT files are converted directly by
+    pandoc. Limitations in the conversions are limitations in pandoc.
+    All other files are first converted to HTML, then converted from
+    HTML by pandoc.
+-   ODT, DOC, DOCX, RTF, RTFD, WORDML, and webarchive files are
+    first converted to html using apple's textutil command. This
+    typically destroys footnotes. YMMV.
+-   PDF files are first converted to HTML using
+    [pdftohtml](http://pdftohtml.sourceforge.net/), which you'll have
+    to install.
 
-### Mellel
+## Mellel
 
-I tried to come up with a command to convert Mellel files on drag and drop, but Mellel files are directories. If you drag a directory into a window, TextMate just prints the directory tree to the window. If you drag it to the TextMate icon, TextMate opens the directory as a project. So to convert Mellel files, try Malte Rosenau's [Mellel2MMD.app](http://wwwuser.gwdg.de/~mrosena/). In principle, it should be possible to modify Rosenau's mellel2mmd.xsl to produce Pandoc markdown, but in practice it is probably more sensible to convert Mellel files to MMD, and then convert the MMD to Pandoc Markdown.
+I tried to come up with a command to convert Mellel files on drag
+and drop, but Mellel files are directories. If you drag a directory
+into a window, TextMate just prints the directory tree to the
+window. If you drag it to the TextMate icon, TextMate opens the
+directory as a project. So to convert Mellel files, try Malte
+Rosenau's [Mellel2MMD.app](http://wwwuser.gwdg.de/~mrosena/). In
+principle, it should be possible to modify Rosenau's mellel2mmd.xsl
+to produce Pandoc markdown, but in practice it is probably more
+sensible to convert Mellel files to MMD, and then convert the MMD
+to Pandoc Markdown.
+
+

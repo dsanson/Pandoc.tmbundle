@@ -17,14 +17,14 @@ if [ -f "$basename.pdf" ]; then
    cp "$basename.pdf" "$basename-old.pdf"
 fi
 echo "&lt;pre&gt;"
-markdown2pdf $opts --biblio="$TM_PANDOC_BIB" --biblio-format="$TM_PANDOC_BIBTYPE" --csl="$TM_PANDOC_CSL" -o "$basename.pdf" &amp;&amp; open "$basename.pdf"
+markdown2pdf $opts --bibliography="$TM_PANDOC_BIB" -o "$basename.pdf" &amp;&amp; open "$basename.pdf"
 echo "&lt;/pre&gt;"</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
 	<string>^~@p</string>
 	<key>name</key>
-	<string>Convert to PDF via LaTeX (citations)</string>
+	<string>Convert to PDF (citations)</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>

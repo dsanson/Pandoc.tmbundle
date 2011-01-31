@@ -1,43 +1,60 @@
-% Pandoc Cheatsheet[^note]
+% Pandoc Cheatsheet[^1]
 % David Sanson
-% March 05, 2010
+% January 31, 2011
 
-[^note]: Cobbled together from <http://daringfireball.net/projects/markdown/syntax> and <http://johnmacfarlane.net/pandoc/README.html>.
+This is incomplete and possibly incorrect. It is intended for quick reference purposes only.
 
-## Metadata
+# Backslash Escapes
 
-Metadata can be specified in an optional title block at the beginning of the file:
+Except inside a code block or inline code, **any punctuation or space
+character** preceded by a backslash will be treated literally, even if
+it would normally indicate formatting.
+
+# Title Block
 
     % title
-    % author(s) (separated by commas)
+    % author(s) (separated by semicolons)
     % date
 
-## Backslash Escapes 
+# Inline TeX and HTML
 
-Except inside a code block or inline code, any punctuation or space character preceded by a backslash will be treated literally, even if it would normally indicate formatting. 
+-   TeX commands are passed through to Markdown, LaTeX and ConTeXt
+    output; otherwise they are deleted.
+-   HTML is passed through untouched but
+    -   Markdown inside HTML blocks is parsed as markdown.
 
-## Span Elements
+# Paragraphs and line breaks
 
-### Paragraphs and line breaks
+-   A paragraph is one or more lines of text separated by a blank line.
+-   A line that ends with two spaces or one escaped space indicates a
+    manual line break.
 
-+   A paragraph is one or more lines of text separated by a blank line.
-+   A line that ends with two spaces indicates a manual line break.
+# Italics, bold, superscript, subscript, strikeout
 
-### Italic, bold, superscript, subscript, strikeout
+    *Italics* and **bold** are indicated with asterisks. 
+    
+    To ~~strikeout~~ text use double tildas. 
+    
+    Superscripts use carats, like so: 2^nd^. 
+    
+    Subscripts use single tildas, like so: H~2~O. 
+    
+    Spaces inside subscripts and superscripts must be escaped, 
+    e.g., H~this\ is\ a\ long\ subscript~.
 
-    *italic*, **bold**
-    ^superscript^, ~subscript~, ~~strikeout~~
-    $TeX math$, `inline code`
+# Inline TeX math and Inline Code
 
-Spaces must be escaped inside of subscripts and superscripts.
+    Inline TeX math goes inside dollar signs: $2 + 2$. 
+    
+    Inline code goes between backticks: `echo 'hello'`.
 
-### Links and Images
+# Links and images
 
     <http://example.com>
     <foo@bar.com>
     [inline link](http://example.com "Title")
     ![inline image](/path/to/image, "alt text")
-    
+
     [reference link][id]
     [implicit reference link][]
     ![reference image][id2]
@@ -46,30 +63,29 @@ Spaces must be escaped inside of subscripts and superscripts.
     [implicit reference link]: http://example.com
     [id2]: /path/to/image "alt text"
 
-### Footnotes
-    
-    Here is an inline note^[the text of the note here]
-    Here is a reference note[^id]
-    
-    [^id]:  Some footnotes have multiple paragraphs.
-        
+# Footnotes
+
+    Inline notes are like this.^[Note that inline notes cannot contain multiple paragraphs.] Reference notes are like this.[^id]
+
+    [^id]:  Reference notes can contain multiple paragraphs.
+
         Subsequent paragraphs must be indented.
-        
-### Citations
 
-Processing citations requires that pandoc be compiled with citeproc support.
+# Citations
 
-    [geach1970], [geach1970@p. 33]
+    Blah blah [see @doe99, pp. 33-35; also @smith04, ch. 1].
 
-where 'geach1970' is the citation key for an entry in your database. A bibliography will be appended. Remember to put something like
+    Blah blah [@doe99, pp. 33-35, 38-39 and *passim*].
 
-    # References
-    
-at the end of your file.
+    Blah blah [@smith04; @doe99].
 
-## Block Elements
+    Smith says blah [-@smith04].
 
-### Headers
+    @smith04 says blah.
+
+    @smith04 [p. 33] says blah.
+
+# Headers
 
     Header 1
     ========
@@ -81,26 +97,22 @@ at the end of your file.
 
     ## Header 2 ##
 
-Closing #s are optional. Blank line required before and after each header.
-  
-### Lists
+Closing \#s are optional. Blank line required before and after each
+header.
 
-Ordered list items may be marked with arabic numerals, uppercase and lowercase letters, or roman numerals. List markers may be enclosed in parentheses or followed by a single right-parentheses or period. They must be separated from the text that follows by at least one space, and, if the list marker is a capital letter with a period, by at least two spaces.
+# Lists
+
+## Ordered lists
 
     1. example
     2. example
-    
+
     A) example
     B) example
 
-Note that the *starting* number matters, but subsequent numbers do not:
+## Unordered lists
 
-    4. example
-    8. example
-
-will generate a list whose elements are numbered 4 and 5.
-
-Unordered lists items may be marked by '*', '+', or '-'.
+Items may be marked by '\*', '+', or '-'.
 
     +   example
     -   example
@@ -111,16 +123,14 @@ Lists may be nested in the usual way:
     +   example
         +   example
     +   example
-    
-### Definitions
+
+## Definition lists
 
     Term 1
       ~ Definition 1
     Term 2
       ~ Definition 2a
       ~ Definition 2b
-    
-or
 
     Term 1
     :   Definition 1
@@ -128,16 +138,14 @@ or
     :   Definition 2
         Second paragraph of definition 2.
 
-### Blockquotes
+# Blockquotes
 
     >   blockquote
     >>  nested blockquote
 
 Blank lines required before and after blockquotes.
 
-### Tables
-
-Tables are a bit complicated. Here is the simple syntax:
+# Tables
 
       Right     Left     Center     Default
     -------     ------ ----------   -------
@@ -146,15 +154,17 @@ Tables are a bit complicated. Here is the simple syntax:
           1     1          1             1
 
     Table:  Demonstration of simple table syntax.
-    
-### Code Blocks
+
+(For more complex tables, see the pandoc documentation.)
+
+# Code Blocks
 
 Begin with three or more tildes; end with at least as many tildes:
 
     ~~~~~~~
     {code here}
     ~~~~~~~
-    
+
 Optionally, you can specify the language of the code block:
 
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.haskell .numberLines}
@@ -163,7 +173,7 @@ Optionally, you can specify the language of the code block:
                    qsort (filter (>= x) xs) 
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Horizontal Rules
+# Horizontal Rules
 
 3 or more dashes or asterisks on a line (space between okay)
 
@@ -171,11 +181,9 @@ Optionally, you can specify the language of the code block:
     * * *
     - - - -
 
-## Inline TeX and HTML
+[^1]: Cobbled together from
+    <http://daringfireball.net/projects/markdown/syntax> and
+    <http://johnmacfarlane.net/pandoc/README.html>.
 
-+   TeX commands are passed through to Markdown, LaTeX and ConTeXt output; otherwise they are deleted.
-+   HTML is passed through untouched but
-    +   Markdown inside HTML blocks is parsed as markdown.
-
-
-
+  [`http://daringfireball.net/projects/markdown/syntax`{.url}]: http://daringfireball.net/projects/markdown/syntax
+  [`http://johnmacfarlane.net/pandoc/README.html`{.url}]: http://johnmacfarlane.net/pandoc/README.html

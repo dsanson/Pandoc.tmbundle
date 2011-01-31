@@ -7,8 +7,8 @@
 	<key>command</key>
 	<string># $TM_FILEPATH: full path of current doc
 
-filename=${TM_FILEPATH}
-basename=${filename%.*}
+filename="${TM_FILEPATH}"
+basename="${filename%.*}"
 
 # Find a unique name
 
@@ -26,7 +26,7 @@ targetname="$basename$connective$inc.odt"
 # run pandoc
 
 echo "&lt;pre&gt;"
-	pandoc -sS -o "$targetname" --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL
+	pandoc -sS -o "$targetname" --bibliography=$TM_PANDOC_BIB
 echo "&lt;/pre&gt;"
 
 # verify that the file exists

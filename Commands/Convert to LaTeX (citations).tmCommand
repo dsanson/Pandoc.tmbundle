@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -sS -w latex --biblio=$TM_PANDOC_BIB --biblio-format=$TM_PANDOC_BIBTYPE --csl=$TM_PANDOC_CSL</string>
+	<string>pandoc -sS -w latex --bibliography=$TM_PANDOC_BIB</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>

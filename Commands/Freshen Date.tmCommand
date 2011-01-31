@@ -5,7 +5,16 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>date=`date "+%B %d, %Y"`
+	<string># If the document has a three-line pandoc title
+# block, this should put the current date
+# on the third line.
+#
+# Note that it is pretty dumb: it won't handle
+# the multi-line title or author fields that
+# pandoc allows
+#
+
+date=`date "+%B %d, %Y"`
 sed "3 s/%.*/% $date/"</string>
 	<key>input</key>
 	<string>document</string>

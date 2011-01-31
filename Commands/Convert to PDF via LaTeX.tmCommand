@@ -24,7 +24,7 @@ echo "&lt;/pre&gt;"</string>
 	<key>keyEquivalent</key>
 	<string>^~@p</string>
 	<key>name</key>
-	<string>Convert to PDF via LaTeX</string>
+	<string>Convert to PDF</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
