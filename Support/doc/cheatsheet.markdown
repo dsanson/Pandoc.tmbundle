@@ -26,7 +26,7 @@ it would normally indicate formatting.
 # Paragraphs and line breaks
 
 -   A paragraph is one or more lines of text separated by a blank line.
--   A line that ends with two spaces or one escaped space indicates a
+-   A line that ends with two spaces, or a line that ends with an escaped new-line (a backslash followed by a carriage return) indicates a
     manual line break.
 
 # Italics, bold, superscript, subscript, strikeout

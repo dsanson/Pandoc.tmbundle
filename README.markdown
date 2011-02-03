@@ -16,7 +16,7 @@ to HTML, LaTeX, ConTeXt, PDF, and ODT.
 This bundle is a work in progress. It has many warts, and it is far from
 complete. It is idiosyncratic in ways that it shouldn't be. Some
 commands are probably broken. It makes use of hackish regexs when it
-could use [elegant haskell scripts][].
+should use [elegant haskell scripts][].
 
 I suspect anyone who uses Pandoc with Textmate will want a bundle
 tweaked to suit their own needs, and that many of us have already rolled
