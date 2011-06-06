@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -f html --no-wrap --reference-links</string>
+	<string>pandoc -f html -t markdown --no-wrap --reference-links</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
