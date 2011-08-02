@@ -5,6 +5,10 @@ Pandoc.tmbundle won't be getting much love from me going forward. If
 someone out there wants to pick this up, I'd be happy to transfer the
 repo over.
 
+Some features are clearly out of date. I haven't kept up with the new
+citations format and changes in the associated command line arguments,
+for example.
+
 # Pandoc TextMate Bundle README
 
 This is a TextMate bundle for use with John MacFarlane's [pandoc][].
