@@ -1,9 +1,11 @@
-# Pandoc TextMate Bundle README
+# Please note
 
-**Please note**: I've mostly abandoned TextMate for MacVim. So 
+I've mostly abandoned TextMate for MacVim. So 
 Pandoc.tmbundle won't be getting much love from me going forward. If
 someone out there wants to pick this up, I'd be happy to transfer the
 repo over.
+
+# Pandoc TextMate Bundle README
 
 This is a TextMate bundle for use with John MacFarlane's [pandoc][].
 Pandoc is a command line tool that converts files from one markup format
