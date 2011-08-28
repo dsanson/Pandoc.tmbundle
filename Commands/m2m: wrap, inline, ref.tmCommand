@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -s -t markdown --bibliography=$TM_PANDOC_BIB --reference-links</string>
+	<string>pandoc -s -t markdown --bibliography=$TM_PANDOC_BIB --reference-links 2&gt;/dev/null</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>

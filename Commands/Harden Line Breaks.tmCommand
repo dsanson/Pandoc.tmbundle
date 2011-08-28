@@ -5,18 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>pandoc -sS --mathjax</string>
+	<string>perl -pe 's/^(.*)/$1\\/'</string>
+	<key>fallbackInput</key>
+	<string>line</string>
 	<key>input</key>
 	<string>selection</string>
-	<key>keyEquivalent</key>
-	<string>^~@p</string>
 	<key>name</key>
-	<string>Preview as HTML</string>
+	<string>Harden Line Breaks</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>replaceSelectedText</string>
 	<key>scope</key>
 	<string>text.html.markdown.pandoc</string>
 	<key>uuid</key>
-	<string>BC891659-5D4C-431C-A806-D7A26377E3EE</string>
+	<string>ACB65F84-1DD1-413B-88B1-710BB15C2554</string>
 </dict>
 </plist>
