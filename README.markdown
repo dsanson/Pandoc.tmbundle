@@ -1,13 +1,9 @@
 # Please note
 
-I've mostly abandoned TextMate for MacVim. So 
+I've most y abandoned TextMate for MacVim. So 
 Pandoc.tmbundle won't be getting much love from me going forward. If
 someone out there wants to pick this up, I'd be happy to transfer the
 repo over.
-
-Some features are clearly out of date. I haven't kept up with the new
-citations format and changes in the associated command line arguments,
-for example.
 
 # Pandoc TextMate Bundle README
 
@@ -81,7 +77,7 @@ I've included a few commands for quickly converting some aspects of MMD
 syntax to Pandoc syntax. There are commands for converting MMD metadata
 to and from Pandoc Title Blocks. There is also a command for converting
 MMD formatted citations, like `[p. 20][#citekey]` to Pandoc formatted
-citations, like `[citekey@p. 20]`.
+citations, like `[@citekey, p. 20]`.
 
 ### Drag and Drop Conversions
 
