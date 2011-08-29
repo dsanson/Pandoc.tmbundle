@@ -1,9 +1,7 @@
 # Please note
 
-I've most y abandoned TextMate for MacVim. So 
-Pandoc.tmbundle won't be getting much love from me going forward. If
-someone out there wants to pick this up, I'd be happy to transfer the
-repo over.
+I've mostly abandoned TextMate for MacVim. If you are thinking about
+doing this too, check out [vim-pandoc][], my pandoc bundle for vim.
 
 # Pandoc TextMate Bundle README
 
@@ -159,6 +157,7 @@ produce Pandoc markdown, but in practice it is probably more sensible to
 convert Mellel files to MMD, and then convert the MMD to Pandoc
 Markdown.
 
+  [vim-pandoc]: https://github.com/vim-pandoc/vim-pandoc%20The%20Pandoc.tmbundle%20won't%20be%20getting%20much%20love%20from%20me%20going%20forward.%20Since%20I'm%20not%20using%20it,%20I%20won't%20notice%20bugs%20and%20won't%20think%20of%20ways%20to%20improve%20it.%20I'm%20happy%20to%20pull%20in%20any%20bug%20fixes%20or%20improvements%20you%20might%20make.
   [pandoc]: http://johnmacfarlane.net/pandoc
   [elegant haskell scripts]: http://johnmacfarlane.net/pandoc/scripting.html
   [pdftohtml]: http://pdftohtml.sourceforge.net/
