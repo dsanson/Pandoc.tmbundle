@@ -3,6 +3,12 @@
 I've mostly abandoned TextMate for MacVim. If you are thinking about
 doing this too, check out [vim-pandoc][], my pandoc bundle for vim.
 
+One consequence is that this bundle is getting less love from me. If 
+you want to give it some love, feel free to fork it, and I'll be happy
+to pull back in any improvements you make. If you want a more serious
+relationship---not just casual forking---we could move this toa shared 
+repo, or I could transfer ownership to you.
+
 # Pandoc TextMate Bundle README
 
 This is a TextMate bundle for use with John MacFarlane's [pandoc][].
@@ -56,11 +62,14 @@ Shell Variables:
 
 ### Autocompletion of Citation Keys
 
-If $TM\_PANDOC\_BIB points to a bibtex or mods xml file, then you can
-use TextMate's autocompletion (type part of a word then hit the ESCAPE
-key) to complete citation keys. I have no idea how robust this is: I am
-just using regexps in ruby to find the citation keys. It shouldn't be
-hard to expand support for other bibliography formats.
+If $TM\_PANDOC\_BIB points to a bibtex, ris, citeproc json, or mods xml
+file, then you can use TextMate's autocompletion (type part of a word
+then hit the ESCAPE key) to complete citation keys. I have no idea how
+robust this is: I am just using regexps in ruby to find the citation
+keys. It shouldn't be hard to expand support for other bibliography
+formats: let me know if there is a format that you are using that is
+not supported. (FYI: support for completion from a zotero database is
+something I'd like to add once zotero's api allows it.)
 
 ### Markdown Tidy
 

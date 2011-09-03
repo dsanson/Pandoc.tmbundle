@@ -14,8 +14,15 @@ bib = ENV["TM_PANDOC_BIB"]
 phrase = ENV["TM_CURRENT_WORD"]
 File.open(bib) { |file|
   text = file.read
-  keys = text.scan(/@.*?\{(#{phrase}.*?),/i)
-  keys = keys + text.scan(/&lt;mods ID=\"(.*?)\"&gt;/i)
+  keys = []
+  # match bibtex keys
+	keys = keys + text.scan(/@.*?\{[\s]*(#{phrase}.*?),/i)
+	# match mods keys
+	keys = keys + text.scan(/&lt;mods ID=\"(#{phrase}.*?)\"&gt;/i)
+	# match RIS keys
+	keys = keys + text.scan(/^ID\s+-\s+(#{phrase}.*)$/i)
+	# match JSON CSL keys
+	keys = keys + text.scan(/\"id\":\s+\"(#{phrase}.*?)\"/i)
   keys.uniq!
   keys.sort!
   puts keys
