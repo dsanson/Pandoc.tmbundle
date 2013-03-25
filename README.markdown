@@ -1,13 +1,11 @@
 # Please note
 
-I've mostly abandoned TextMate for MacVim. If you are thinking about
-doing this too, check out [vim-pandoc][], my pandoc bundle for vim.
+I've abandoned TextMate for MacVim, and stopped supporting this bundle. 
+If you want to take it over, let me know, and I'll add a link here to 
+your fork. 
 
-One consequence is that this bundle is getting less love from me. If 
-you want to give it some love, feel free to fork it, and I'll be happy
-to pull back in any improvements you make. If you want a more serious
-relationship---not just casual forking---we could move this toa shared 
-repo, or I could transfer ownership to you.
+If you are thinking about moving to vim, you might like [vim-pandoc][], 
+a pandoc bundle for vim.
 
 # Pandoc TextMate Bundle README
 
