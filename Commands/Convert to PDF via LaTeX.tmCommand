@@ -17,7 +17,7 @@ if [ -f "$basename.pdf" ]; then
    cp "$basename.pdf" "$basename-old.pdf"
 fi
 echo "&lt;pre&gt;"
-markdown2pdf $opts -o "$basename.pdf" &amp;&amp; open "$basename.pdf"
+pandoc $opts -o "$basename.pdf" &amp;&amp; open "$basename.pdf"
 echo "&lt;/pre&gt;"</string>
 	<key>input</key>
 	<string>selection</string>
