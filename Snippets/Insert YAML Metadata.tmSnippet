@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>---
+title: $1
+author: ${2:`id -P | perl -pe 's/(?:.*?:){7}(.*?):.*/$1/'`}
+date: ${3:`date "+%B %d, %Y"`}
+---
+
+$4</string>
+  <key>keyEquivalent</key>
+  <string>~@m</string>
+	<key>name</key>
+	<string>Insert Title Block (YAML)</string>
+	<key>tabTrigger</key>
+	<string>new</string>
+	<key>uuid</key>
+	<string>12A7100E-9697-42CF-B228-A4895163A42A</string>
+</dict>
+</plist>
